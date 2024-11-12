@@ -11,19 +11,19 @@ document.addEventListener('click', (e) => {
 
   let y = e.clientY - wallRectangle.top - spider.height + spider.height / 2;
 
-  if (e.clientX < wallRectangle.left + spider.width / 2) {
+  if (e.clientX <= wallRectangle.left + spider.width / 2) {
     x = 0;
   } else if (
-    e.clientX >
-    wallRectangle.left + wallRectangle.width - spider.width / 2
+    e.clientX >=
+    wallRectangle.left + wallRectangle.width - spider.width
   ) {
     x = wallRectangle.width - spider.width - spider.width / 2;
   }
 
-  if (e.clientY < wallRectangle.top + spider.height) {
+  if (e.clientY <= wallRectangle.top + spider.height / 2) {
     y = 0;
   } else if (
-    e.clientY >
+    e.clientY >=
     wallRectangle.top + wallRectangle.height - spider.height
   ) {
     y = wallRectangle.height - spider.height - spider.height / 2;
